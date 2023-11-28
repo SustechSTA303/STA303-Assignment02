@@ -1,11 +1,11 @@
 # STA303-Assignment02: Applications of CLIP model
 
-### Assignmet description
+### 📐 Assignmet description
 
 Design experiments to validate the test performance of CLIP model in a new dataset, which is selected by students. This task is to explore the potential applications of CLIP in the real world, so students are encouraged to apply CLIP to some new scenarios (new datasets/settings/tasks/…).
 
-### Recommended steps
- Scenario - Results – Discussion - Conclusion
+### 📗 Recommended steps
+ Scenario ➟ Results ➟ Discussion ➟ Conclusion ✔️
 
 - Select a dataset based on specific criteria, considering its size, diversity, and relevance to desired scenarios, to evaluate CLIP's performance.
 
