@@ -1,16 +1,43 @@
-# STA303-Assignment02: Applications of CLIP model
+# STA303 Assignment 2: Applications of CLIP Model
 
-### 📐 Assignmet description
+## Model used: 
 
-Design experiments to validate the test performance of CLIP model in a new dataset, which is selected by students. This task is to explore the potential applications of CLIP in the real world, so students are encouraged to apply CLIP to some new scenarios (new datasets/settings/tasks/…).
+**CLIP checkpoint:** 
 
-### 📗 Recommended steps
-⏳ Scenario ➟ Results ➟ Discussion ➟ Conclusion ✔️
+https://drive.google.com/uc?id=14pXWwB4Zm82rsDdvbGguLfx9F8aM7ovT
 
-- Select a dataset based on specific criteria, considering its size, diversity, and relevance to desired scenarios, to evaluate CLIP's performance.
+    ./pretrained_models/conceptual_weights.pt
+    
+https://drive.google.com/uc?id=1IdaBtMSvtyzF0ByVaBHtvM0JYSXRExRX
 
-- Performance Evaluation: Quantitative and qualitative results will be presented, comparing CLIP's performance to baseline models, supported by visualizations and examples.
+    ./pretrained_models/coco_weights.pt
+    
+**CoCa:** 
 
-- Discussion and Analysis: Results will be analyzed, identifying strengths, weaknesses, and potential real-world applications of CLIP in the chosen scenarios.
+https://huggingface.co/laion/mscoco_finetuned_CoCa-ViT-L-14-laion2B-s13B-b90k/tree/main
 
-- Conclusion: The experiment's findings will be summarized, emphasizing the importance of validating CLIP's performance on the new dataset and providing recommendations for further investigations.
+    ./open_clip/open_clip_config.json
+
+    ./open_clip/pytorch_model.bin
+
+## Flickr8k Dataset: 
+
+https://www.kaggle.com/datasets/adityajn105/flickr8k
+
+    ./data/Image
+
+    ./data/caption.txt
+
+## GPT2: 
+
+https://huggingface.co/gpt2/tree/main
+
+    ./pretrained_model/config.json
+
+    ./pretrained_model/tokenizer.json
+
+    ./pretrained_model/vocab.json
+
+    ./pretrained_model/merges.txt
+
+    ./pretrained_model/pytorch_model.bin
