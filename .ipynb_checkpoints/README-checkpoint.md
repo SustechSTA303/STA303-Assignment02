@@ -20,7 +20,7 @@ https://huggingface.co/laion/mscoco_finetuned_CoCa-ViT-L-14-laion2B-s13B-b90k/tr
 
     # Relative Paths:
     ./open_clip/open_clip_config.json
-    ./open_clip/pytorch_model.bin
+    ./open_clip/open_clip_pytorch_model.bin
 
 **GPT2:**
 
