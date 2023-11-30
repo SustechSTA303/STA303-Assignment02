@@ -70,4 +70,4 @@ ood_acc4 = eval_msp(ood_dataloader4, model, prompt, class_names, threshold, devi
 
 #! Save the results
 df = pd.DataFrame({'threshold': [threshold], 'in_acc': [in_acc], 'iNaturalist': [ood_acc1], 'Textures': [ood_acc2], 'Places': [ood_acc3], 'SUN': [ood_acc4]}, index=[0])
-df.to_csv(f'./log/msp/{VISUAL_BACKBONE}_{percentage}.csv')
+df.to_csv(f'./log/msp/{VISUAL_BACKBONE}_{percentage}.csv', index=False)
