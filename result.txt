@@ -1,0 +1,23 @@
+the zero-shot performance on CIFAR10 is 54.95%, visual encoder is RN50.
+
+the zero-shot performance on CIFAR10 is 85.15%, visual encoder is ViT-B/32.
+
+the zero-shot performance on CIFAR10 is 86.83%, visual encoder is ViT-B/16.
+
+the zero-shot performance on CIFAR100 is 20.82%, visual encoder is RN50.
+
+the zero-shot performance on CIFAR100 is 50.20%, visual encoder is ViT-B/32.
+
+the zero-shot performance on CIFAR100 is 53.09%, visual encoder is ViT-B/16.
+
+the zero-shot performance on FashionMNIST is 43.08%, visual encoder is RN50.
+
+the zero-shot performance on FashionMNIST is 49.54%, visual encoder is ViT-B/32.
+
+the zero-shot performance on FashionMNIST is 56.52%, visual encoder is ViT-B/16.
+
+NN Accuracy on FASHION-MNIST test images: 88.74%
+
+NN Accuracy on CIFAR-10 test images: 74.60%
+
+NN Accuracy on CIFAR-100 test images: 39.71%
