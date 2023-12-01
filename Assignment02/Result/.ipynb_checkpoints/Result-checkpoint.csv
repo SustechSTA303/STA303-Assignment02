@@ -1,0 +1,11 @@
+﻿Task,Dataset,Visual Encoder,Accuracy,Precision,Recall,F1 Score,Evaluation Time (seconds)
+Zero-shot,FashionMNIST,RN50,53.91%,54.98%,53.91%,49.78%,21.76
+,CIFAR10,,54.95%,62.23%,54.95%,54.00%,21.4
+,FashionMNIST,RN101,47.34%,56.45%,47.34%,44.26%,29.34
+,CIFAR10,,57.92%,69.52%,57.92%,56.20%,28.88
+,FashionMNIST,ViT-B/32,66.42%,64.30%,66.42%,63.61%,12.15
+,CIFAR10,,85.15%,85.65%,85.15%,85.12%,12.1
+,FashionMNIST,ViT-B/16,67.52%,67.51%,67.52%,64.85%,33.46
+,CIFAR10,,86.83%,87.75%,86.83%,86.85%,33.96
+Baseline,FashionMNIST,-,89.26%,89.75%,89.26%,89.36%,(Epochs=3) Train:226.54 Test:22.58
+,CIFAR10,-,58.89%,58.88%,58.89%,58.63%,(Epochs=3) Train:196.23 Test:24.75
