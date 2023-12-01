@@ -8,11 +8,12 @@ from clip import clip
 import argparse
 import pandas as pd
 
-device = torch.device("cuda:5" if torch.cuda.is_available() else "cpu")
 parser = argparse.ArgumentParser()
 parser.add_argument('--vb', type=str, default='RN50', help='RN50, ViT-B/32, ViT-B/16')
 parser.add_argument('--percentage', type=int, default=5, help='the percentage of the in-distribution test set be misclassified as OOD')
+parser.add_argument('--cuda', type=int, default=5, help='cuda device')
 args = parser.parse_args()
+device = torch.device(f"cuda:{args.cuda}" if torch.cuda.is_available() else "cpu")
 
 #! Hyperparameters
 # Training
@@ -70,4 +71,9 @@ ood_acc4 = eval_msp(ood_dataloader4, model, prompt, class_names, threshold, devi
 
 #! Save the results
 df = pd.DataFrame({'threshold': [threshold], 'in_acc': [in_acc], 'iNaturalist': [ood_acc1], 'Textures': [ood_acc2], 'Places': [ood_acc3], 'SUN': [ood_acc4]}, index=[0])
-df.to_csv(f'./log/msp/{VISUAL_BACKBONE}_{percentage}.csv', index=False)
+if VISUAL_BACKBONE == 'RN50':
+    df.to_csv(f'./log/msp/RN50_{percentage}.csv', index=False)
+elif VISUAL_BACKBONE == 'ViT-B/32':
+    df.to_csv(f'./log/msp/ViT-B_32_{percentage}.csv', index=False)
+elif VISUAL_BACKBONE == 'ViT-B/16':
+    df.to_csv(f'./log/msp/ViT-B_16_{percentage}.csv', index=False)

@@ -1,3 +1,4 @@
+from sklearn.metrics import roc_auc_score
 import torch
 import clip
 import torch.nn.functional as F
@@ -87,7 +88,7 @@ def eval_msp(ood_dataloader, model, prompt, class_names, threshold, device, data
         threshold (float): MSP threshold
         device (torch.device): cpu or gpu
     Returns:
-        ood_acc (float): classification accuracy of the out-of-distribution test set
+        ood_acc (float): classification accuracy of half out-of-distribution test set and half in-distribution test set
     """
     ood_logits = []
     for batch in tqdm(ood_dataloader, mininterval=10):
