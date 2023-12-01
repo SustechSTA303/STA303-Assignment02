@@ -2,7 +2,7 @@
 
 ## Model used: 
 
-**CLIP checkpoint:** 
+**Checkpoint:** 
 
 https://drive.google.com/uc?id=14pXWwB4Zm82rsDdvbGguLfx9F8aM7ovT
 
