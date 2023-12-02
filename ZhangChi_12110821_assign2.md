@@ -109,13 +109,13 @@ Then I design an experiment to quantify the performance of text-to-image-retriev
 3.	If the top-K images (from top-K similarities) contain the origin image corresponding to the text in raw data, add 1 point to the model.
 4.	After enumerating  all text, compute scores and accuracy of each model and compare them.
 
-> To simplify the the whole experiment, I only add one point to the successful retrieval. In fact, we can explore more by modifying the top-K or assigning score differently(5 points to the circumstance that  origin image in the first place, 4 points to the circumstance that  origin image in the second place, etc.). 
+	> To simplify the whole experiment, I only add one point to the successful retrieval. In fact, we can explore more by modifying the top-K or assigning score differently(5 points to the circumstance that origin image in the first place, 4 points to the circumstance that  origin image in the second place, etc.). 
 
 ![scores](fig/scores.svg)
 
-The figure below has demonstrated scores(orange) and accuracy(green) attained by each model. Based on the pictured information, Baseline model has worst performance among four models, with 6 successfully retrieval in 833 times. And  CLIP(ViT-B/16) has get greatest score, then CLIP(ViT-B/32) and CLIP(RN50), with score in 400, 376, 339 respectively.
+The figure above has demonstrated scores(orange) and accuracy(green) attained by each model. Based on the pictured information, Baseline model has worst performance among four models, with 6 successfully retrieval in 833 times. And  CLIP(ViT-B/16) has get greatest score, then CLIP(ViT-B/32) and CLIP(RN50), with score in 400, 376, 339 respectively.
 
-Actually, the retrieval here is just find the most appropriate images in finite data,  which is  inclined to be a multi-classification task rather than a text-to-image retrieval task, even though there are 833 labels. And Taking a consideration that uses it in the real-world online retrieval, this kind of image search method is **less effective**. 
+Actually, the retrieval here is just find the most appropriate images in finite data,  which is  inclined to be a multi-classification task rather than a text-to-image retrieval task, even though there are 833 labels. And Taking a consideration that using it in the real-world online retrieval, this kind of image search method is **less effective**. 
 
 
 
@@ -146,15 +146,14 @@ In conclusion, while CLIP has shown promise in the Text-to-Image Retrieval task,
 
 ## Appendix
 
-In this part, I showed more queries result from clip and baseline model.
+In this part, I show more results of different queries from clip and baseline model.
 
 ### Mouth open
 
 - **CLIP(RN50)**
 
 ![](fig/query_clip2.svg)
-
-add some noise:
+		add some noise:
 
 ![query_clip_noise](fig/query_clip_noise.svg)
 
