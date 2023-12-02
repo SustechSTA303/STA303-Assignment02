@@ -14,3 +14,4 @@ Design experiments to validate the test performance of CLIP model in a new datas
 - Discussion and Analysis: Results will be analyzed, identifying strengths, weaknesses, and potential real-world applications of CLIP in the chosen scenarios.
 
 - Conclusion: The experiment's findings will be summarized, emphasizing the importance of validating CLIP's performance on the new dataset and providing recommendations for further investigations.
+
