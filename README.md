@@ -1,16 +1,10 @@
-# STA303-Assignment02: Applications of CLIP model
+Models: For CLIP, I choose the CLIP model with RN50x64 as the image encoder (However, on CIFAR100, I use Vit-L/14 rather than RN50x64 because it demonstrates significantly better performance).
+For the baseline model, I employ ResNet50 which has been pretrained.
 
-### 📐 Assignmet description
+Datasets(Scenario): I choose Mnist, Oxford-IIITPets and CIFAR100 as benchmark tasks. 
 
-Design experiments to validate the test performance of CLIP model in a new dataset, which is selected by students. This task is to explore the potential applications of CLIP in the real world, so students are encouraged to apply CLIP to some new scenarios (new datasets/settings/tasks/…).
+Metric: I compute and compare the zero-shot accuracy of Clip and fine-tuning accuracy of ResNet50.
 
-### 📗 Recommended steps
-⏳ Scenario ➟ Results ➟ Discussion ➟ Conclusion ✔️
+Mnist.ipynb Pet.ipynb Cifar100.ipynb are the files to evaluate the performance of Clip on different datasets.
+funct.py contains some functions used in fine-tuning or evaluating.
 
-- Select a dataset based on specific criteria, considering its size, diversity, and relevance to desired scenarios, to evaluate CLIP's performance.
-
-- Performance Evaluation: Quantitative and qualitative results will be presented, comparing CLIP's performance to baseline models, supported by visualizations and examples.
-
-- Discussion and Analysis: Results will be analyzed, identifying strengths, weaknesses, and potential real-world applications of CLIP in the chosen scenarios.
-
-- Conclusion: The experiment's findings will be summarized, emphasizing the importance of validating CLIP's performance on the new dataset and providing recommendations for further investigations.
