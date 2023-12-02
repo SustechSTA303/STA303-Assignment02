@@ -10,7 +10,10 @@ Steps:
 
 import os
 import tensorflow as tf
+import torch
 import keras
+from keras.utils import load_img, img_to_array
+from keras.preprocessing import text
 import numpy as np
 import matplotlib.pyplot as plt
 import string
@@ -27,7 +30,8 @@ def feature_extractions(directory):
     Return: A dictionary of features extracted by VGG-16, size 4096.
     """
     
-    model = tf.keras.applications.vgg16.VGG16()
+    # model = tf.keras.applications.vgg16.VGG16()
+    model = tf.keras.applications.ResNet50(weights='imagenet')
     model = keras.models.Model(inputs=model.input, outputs=model.layers[-2].output) #Remove the final layer
     
     features = {}
@@ -35,21 +39,21 @@ def feature_extractions(directory):
         filename = directory + "/" + f
         identifier = f.split('.')[0]
         
-        image = keras.preprocessing.image.load_img(filename, target_size=(224,224))
-        arr = keras.preprocessing.image.img_to_array(image, dtype=np.float32)
+        image = keras.utils.load_img(filename, target_size=(224,224))
+        arr = keras.utils.img_to_array(image, dtype=np.float32)
         arr = arr.reshape((1, arr.shape[0], arr.shape[1], arr.shape[2]))
         arr = keras.applications.vgg16.preprocess_input(arr)
     
         feature = model.predict(arr, verbose=0)
         features[identifier] = feature
         
-        print("feature extraction: {}".format(f))
+        # print("feature extraction: {}".format(f))
     return(features)
 # =============================================================================
 # 
 # if __name__ == "__main__":
 #     features = feature_extractions("Flickr8k_Dataset")
-#     
+    
 #     #save features for future use.
 #     with open("features.pkl", "wb") as f:
 #        dump(features, f)
@@ -124,7 +128,7 @@ def create_tokenizer(caption_dict, num_vocab=None):
     Input: caption dictionary, num_vocab
     Output: Tokenizer fitted on the captions in the dictionary, with maximum number of vocab = num_vocab
     """
-    tokenizer = keras.preprocessing.text.Tokenizer(num_words=num_vocab, filters='!"#$%&()*+,-./:;=?@[\\]^_`{|}~\t\n')
+    tokenizer = text.Tokenizer(num_words=num_vocab, filters='!"#$%&()*+,-./:;=?@[\\]^_`{|}~\t\n')
     captions = caption_to_list(caption_dict)
             
     tokenizer.fit_on_texts(captions)
@@ -153,6 +157,17 @@ def load_features(dataset):
     Output: The VGG-16 features according to the identifiers
     """
     with open("features.pkl", "rb") as f:
+        features = load(f)
+    features = {photo_id: features[photo_id] for photo_id in dataset}
+    
+    return(features)
+
+def load_features_clip(dataset):
+    """
+    Input: dataset (list of identifier)
+    Output: The clip features according to the identifiers
+    """
+    with open("features_clip.pkl", "rb") as f:
         features = load(f)
     features = {photo_id: features[photo_id] for photo_id in dataset}
     
@@ -252,7 +267,7 @@ if __name__ == "__main__":
 """
 #Model definition
 def define_model(max_length, vocab_size, dp_rate=0.1, embed_size=100, embedding_matrix=None):
-    img_inputs = keras.layers.Input(shape=(4096,))
+    img_inputs = keras.layers.Input(shape=(2048,))
     img_dp1 = keras.layers.Dropout(rate=dp_rate)(img_inputs)
     img_dense = keras.layers.Dense(64)(img_dp1)
     img_bn1 = keras.layers.BatchNormalization()(img_dense)
@@ -291,6 +306,69 @@ def define_model(max_length, vocab_size, dp_rate=0.1, embed_size=100, embedding_
     
     return(model)
 
+import torch
+import torch.nn as nn
+
+class CustomModel(nn.Module):
+    def __init__(self, max_length, vocab_size, dp_rate=0.1, embed_size=100, pre_clip=None):
+        super().__init__()
+
+        # Image branch
+        self.img_fc1 = nn.Linear(512, 64)
+        self.img_bn1 = nn.BatchNorm1d()
+        self.img_activation = nn.ReLU()
+
+        # RepeatVector
+        self.img_rep = nn.Linear(64, max_length)
+
+        # Text branch
+        self.text_embedding=pre_clip
+        # if embedding_matrix is None:
+        #     self.text_embedding = nn.Embedding(vocab_size, embed_size, padding_idx=0)
+        # else:
+        #     self.text_embedding = nn.Embedding.from_pretrained(torch.FloatTensor(embedding_matrix), padding_idx=0, freeze=True)
+
+        self.text_dp1 = nn.Dropout(dp_rate)
+        self.text_lstm = nn.LSTM(embed_size, 64, batch_first=True)
+
+        # Decoder
+        self.concat = nn.Linear(128, 128)
+        self.decoder_dp1 = nn.Dropout(dp_rate)
+        self.decoder_fc1 = nn.Linear(128, 256)
+        self.decoder_dp2 = nn.Dropout(dp_rate)
+        self.decoder_activation = nn.ReLU()
+        self.decoder_fc2 = nn.Linear(256, vocab_size)
+        self.decoder_softmax = nn.Softmax(dim=2)
+
+    def forward(self, img_inputs, text_inputs):
+        # Image branch
+        print(img_inputs.shape)
+        img_outputs = self.img_activation(self.img_bn1(self.img_fc1(img_inputs)))
+        img_rep = self.img_rep(img_outputs.unsqueeze(1))
+
+        # Text branch
+        text_embed = self.text_embedding.encode_text(text_inputs)
+        text_dp1 = self.text_dp1(text_embed)
+        _, (text_lstm, _) = self.text_lstm(text_dp1)
+
+        # Decoder
+        decoder_inputs = torch.cat([img_rep, text_lstm.permute(1, 0, 2)], dim=2)
+        decoder_dp1 = self.decoder_dp1(decoder_inputs)
+        decoder_fc1 = self.decoder_activation(self.decoder_fc1(decoder_dp1))
+        decoder_dp2 = self.decoder_dp2(decoder_fc1)
+        decoder_outputs = self.decoder_softmax(self.decoder_fc2(decoder_dp2))
+
+        return decoder_outputs
+
+# # Instantiate the model
+# max_length =  # specify the max_length value
+# vocab_size =  # specify the vocab_size value
+# model = CustomModel(max_length, vocab_size)
+
+# # Print the model summary
+# print(model)
+
+
 """
 4. Progressive model training
 """
@@ -320,11 +398,13 @@ def generate_dataset(caption_dict, features, tokenizer, max_length, vocab_size, 
             #sample the caption randomly
             s2 = np.random.choice(np.arange(len(caption_list)), size=1, replace=True)[0]
             caption = caption_list[s2]
+            # print(caption)
             encoded = tokenizer.texts_to_sequences([caption])[0]
-            
+            # print(tokenizer.texts_to_sequences([caption]))
+            # print(encoded)
             tmp_text, tmp_Y = encoded[:-1], encoded[1:]
-            padded_text = keras.preprocessing.sequence.pad_sequences([tmp_text], maxlen=max_length, padding='pre')[0]
-            padded_Y = keras.preprocessing.sequence.pad_sequences([tmp_Y], maxlen=max_length, padding='pre')[0]
+            padded_text = tf.keras.utils.pad_sequences([tmp_text], maxlen=max_length, padding='pre')[0]
+            padded_Y = tf.keras.utils.pad_sequences([tmp_Y], maxlen=max_length, padding='pre')[0]
             padded_Y = tf.keras.utils.to_categorical(padded_Y, num_classes=vocab_size)
             
             X_img.append(features[photo_id][0])
@@ -334,6 +414,10 @@ def generate_dataset(caption_dict, features, tokenizer, max_length, vocab_size, 
             #Generate until: num_photos photos; iterate through all photos + restart
             count += 1
             if count % num_photos == 0:
+                # print(X_img)
+                # print(X_text)
+                # print(Y)
+                # yield([[np.array([img.cpu().numpy() for img in X_img]), np.array(X_text)], np.array(Y)])
                 yield([[np.array(X_img), np.array(X_text)], np.array(Y)])
                 
                 X_img = []
@@ -341,6 +425,7 @@ def generate_dataset(caption_dict, features, tokenizer, max_length, vocab_size, 
                 Y = []
             if count >= len(photo_ids):
                 if len(Y) > 0:
+                    # yield([[np.array([img.cpu().numpy() for img in X_img]), np.array(X_text)], np.array(Y)])
                     yield([[np.array(X_img), np.array(X_text)], np.array(Y)])
                 break
 
@@ -382,10 +467,18 @@ def sample_caption(model, tokenizer, max_length, vocab_size, feature):
     while 1:
         #Prepare input to model
         encoded = tokenizer.texts_to_sequences([caption])[0]
-        padded = keras.preprocessing.sequence.pad_sequences([encoded], maxlen=max_length, padding='pre')[0]
+        padded = tf.keras.utils.pad_sequences([encoded], maxlen=max_length, padding='pre')[0]
         padded = padded.reshape((1, max_length))
         
-        pred_Y = model.predict([feature, padded])[0,-1,:]
+        # print(feature.dtype)
+        # print(padded.dtype)
+        # print(isinstance(feature, torch.Tensor))
+        # print(isinstance(padded, torch.Tensor))
+        # feature=feature.cpu().numpy()
+        
+        feature = tf.convert_to_tensor(feature)
+        padded = tf.convert_to_tensor(padded)
+        pred_Y = model.predict([feature, padded], verbose=0)[0,-1,:]
         next_word = tokenizer.index_word[pred_Y.argmax()]
         
         #Update caption
@@ -440,8 +533,8 @@ def evaluate_model(model, tokenizer, test_caption_dict, test_features, max_lengt
     for i in range(len(samples)):
         photo_id = photo_ids[samples[i]]
         
-        fn = "Flickr8k_Dataset/" + photo_id + '.jpg'
-        img = keras.preprocessing.image.load_img(fn)
+        fn = "../Flickr8k_Dataset/" + photo_id + '.jpg'
+        img = keras.utils.load_img(fn)
         plt.figure(i+1)
         plt.imshow(img)
         plt.figtext(0.5, 0.01, disp_captions_dict[photo_id], wrap=True, horizontalalignment='center', fontsize=12)
