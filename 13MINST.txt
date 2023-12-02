@@ -1,0 +1,3 @@
+whole test
+the promt is : a number 
+the zero-shot performance on MINST is 19.99%, visual encoder is ViT-B/32.

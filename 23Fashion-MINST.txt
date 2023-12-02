@@ -1,0 +1,3 @@
+whole test
+the promt is : dhajkdhiugfw
+the zero-shot performance on Fashion-MINST is 55.01%, visual encoder is ViT-B/16.

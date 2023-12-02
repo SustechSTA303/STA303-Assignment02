@@ -1,0 +1,18 @@
+whole test
+the promt is : qweasd 
+the zero-shot performance on Fashion-MINST is 47.70%, visual encoder is RN50.
+whole test
+the promt is : qweasd 
+the zero-shot performance on Fashion-MINST is 49.36%, visual encoder is ViT-B/32.
+whole test
+the promt is : qweasd 
+the zero-shot performance on Fashion-MINST is 57.59%, visual encoder is ViT-B/16.
+whole test
+the promt is : it is a 
+the zero-shot performance on Fashion-MINST is 44.35%, visual encoder is RN50.
+whole test
+the promt is : it is a 
+the zero-shot performance on Fashion-MINST is 50.34%, visual encoder is ViT-B/32.
+whole test
+the promt is : a photo of 
+the zero-shot performance on Fashion-MINST is 42.81%, visual encoder is RN50.

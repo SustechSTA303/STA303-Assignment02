@@ -1,0 +1,12 @@
+whole test
+the promt is : qweasd
+the zero-shot performance on MINST is 50.30%, visual encoder is ViT-B/16.
+whole test
+the promt is : A photo of	
+the zero-shot performance on MINST is 51.23%, visual encoder is ViT-B/16.
+whole test
+the promt is : dhajkdhiugfw
+the zero-shot performance on MINST is 57.29%, visual encoder is ViT-B/16.
+whole test
+the promt is : the number
+the zero-shot performance on MINST is 56.61%, visual encoder is ViT-B/16.

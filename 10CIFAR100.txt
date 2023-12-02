@@ -1,0 +1,3 @@
+whole test
+the promt is : the photo of
+the zero-shot performance on CIFAR100 is 20.17%, visual encoder is RN50.

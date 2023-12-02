@@ -1,0 +1,4 @@
+without finie-tunewhole test
+the ResNet's performance on MINST is 10.24%
+after fine-tunewhole test
+the ResNet's performance on MINST is 99.31%

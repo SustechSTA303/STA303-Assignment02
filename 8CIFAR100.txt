@@ -1,0 +1,10 @@
+subset test
+the promt is :the photo of
+the zero-shot performance on CIFAR100 is 0.21%, visual encoder is RN50.subset test
+the promt is :the photo of
+the zero-shot performance on CIFAR100 is 0.49%, visual encoder is ViT-B/32.whole test
+the promt is :the photo of
+the zero-shot performance on CIFAR100 is 44.21%, visual encoder is ViT-B/32.
+whole test
+the promt is :the photo of
+the zero-shot performance on CIFAR100 is 50.62%, visual encoder is ViT-B/16.

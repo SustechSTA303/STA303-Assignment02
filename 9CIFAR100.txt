@@ -1,0 +1,7 @@
+whole test
+whole test
+the promt is :the photo of
+the zero-shot performance on CIFAR is 44.21%, visual encoder is ViT-B/32.
+whole test
+the promt is : the photo of
+the zero-shot performance on CIFAR100 is 50.62%, visual encoder is ViT-B/16.
