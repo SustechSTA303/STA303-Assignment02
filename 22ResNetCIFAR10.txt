@@ -1,0 +1,6 @@
+without finie-tunesubset test
+the ResNet's performance on CIFAR10 is 15.00%
+after fine-tunesubset test
+the ResNet's performance on CIFAR10 is 72.00%
+after fine-tunewhole test
+the ResNet's performance on CIFAR10 is 74.63%

@@ -1,0 +1,4 @@
+without finie-tunewhole test
+the ResNet's performance on Fashion-MINST is 9.89%
+after fine-tunewhole test
+the ResNet's performance on Fashion-MINST is 89.81%

@@ -1,0 +1,6 @@
+after fine-tunewhole test
+the ResNet's performance on CIFAR100 is 47.35%
+without finie-tunewhole test
+the ResNet's performance on CIFAR100 is 1.44%
+after fine-tunewhole test
+the ResNet's performance on CIFAR100 is 47.43%

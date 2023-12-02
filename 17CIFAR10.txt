@@ -1,0 +1,9 @@
+whole test
+the promt is : a photo of
+the zero-shot performance on CIFAR10 is 50.59%, visual encoder is RN50.
+whole test
+the promt is : adsadadsdasdasdasdas
+the zero-shot performance on CIFAR10 is 45.99%, visual encoder is RN50.
+whole test
+the promt is : qwert
+the zero-shot performance on CIFAR10 is 55.95%, visual encoder is RN50.
