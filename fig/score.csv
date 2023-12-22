@@ -1,0 +1,5 @@
+Model,Score
+Baseline,6
+RN50,339
+ViT-B/16,400
+ViT-B/32,376

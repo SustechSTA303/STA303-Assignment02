@@ -1,0 +1,1413 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>ZhangChi_12110821_assign2</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+/*https://github.com/AntonVanke/Typora-Cement-Theme*/
+/*
+字体  Font: SourceHanSans
+LICENSE: https://github.com/adobe-fonts/source-han-sans/blob/master/LICENSE.txt
+*/
+/*
+代码块字体  Code block font: Fira Code
+LICENSE: https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+*/
+@media print {
+    :root {
+        --bg-color: var(--write-bg-color) !important;
+    }
+
+    html, body {
+        background: var(--write-bg-color) !important;
+    }
+}
+
+body {
+    background: var(--bg-color);
+    font: 100%/1.65 var(--font-family-base);
+    max-width: 950px;
+}
+
+/* 内容沉底 */
+content {
+    bottom: 0 !important;
+}
+
+.ty-footer {
+    background-color: transparent !important;
+    border: 0 !important;
+    right: 12px !important;
+}
+
+/* 使左侧边栏统一 */
+.sidebar-menu {
+    border: none !important;
+}
+
+/* 调整条 */
+.typora-sidebar-resizer-bar:hover {
+    border-right: 2px dashed var(--color-black);
+}
+
+#write {
+    border-radius: var(--hover-radius);
+    margin: 16px 16px 10% 16px;
+    background: var(--write-bg-color);
+    transition-duration: 0.3s;
+    transform: perspective(1px) translateZ(0);
+    transition-property: padding;
+    /*max-width: 950px;*/
+    /*margin: 16px auto 10%;*/
+}
+
+/* 写作区域宽度自适应 */
+@media (min-width: 1000px) {
+    #write {
+        padding-left: 64px;
+        padding-right: 64px;
+        /*margin-left: 10%;*/
+        /*margin-right: 10%;*/
+    }
+}
+
+@media (min-width: 1270px) {
+    #write {
+        padding-left: 128px;
+        padding-right: 128px;
+        /*margin-left: 15%;*/
+        /*margin-right: 15%;*/
+    }
+}
+
+/* 底部结束 */
+/* #write::after {
+    content: "Everything has changed";
+    color: var(--text-color);
+    font-size: .8rem;
+    font-style: italic;
+    height: 1rem !important;
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 20%);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 5;
+} */
+
+/*标题*/
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+    color: var(--title-color);
+    font-family: var(--font-family-base);
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0 0 1rem 0;
+}
+
+#write h1 {
+    font-size: 3rem;
+}
+
+#write h2 {
+    font-size: 1.6rem;
+}
+
+#write h3 {
+    font-size: 1.2rem;
+}
+
+#write h4 {
+    font-size: 1rem;
+}
+
+#write h5 {
+    font-size: 0.85rem;
+}
+
+#write h6 {
+    font-size: 0.8rem;
+}
+
+#write .md-heading:before {
+    color: var(--md-heading-before-color);
+}
+
+/*表格*/
+#write table:not(.md-grid-board) {
+    /* background-color: var(--table-first-bg-color); */
+    border: 1px solid var(--table-border-color);
+    margin: 20px 0;
+    border-collapse: separate;
+    border-radius: var(--hover-radius);
+}
+
+
+#write table:not(.md-grid-board) td {
+    padding: 12px 24px;
+    border-left: 1px dashed var(--table-border-color);
+    border-bottom: 1px dashed var(--table-border-color);
+    transition: background-color 0.3s ease-out;
+}
+
+#write table:not(.md-grid-board) th {
+    padding: 12px 24px;
+    border-left: 1px solid var(--table-border-color);
+    border-bottom: 1px solid var(--table-border-color);
+    transition: background-color 0.3s ease-out;
+}
+
+#write table thead tr {
+    background-color: var(--table-first-bg-color);
+}
+
+#write table:not(.md-grid-board) td:hover,
+#write table:not(.md-grid-board) th:hover {
+    background-color: rgba(0, 0, 0, .1);
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 20%);
+}
+
+#write table:not(.md-grid-board) tr td:first-child,
+#write table:not(.md-grid-board) tr th:first-child {
+    border-left: 0;
+}
+
+#write table:not(.md-grid-board) tr:last-child td {
+    border-bottom: 0;
+}
+
+/* 左上角表格 */
+#write table:not(.md-grid-board) tr:first-child th:first-child {
+    border-top-left-radius: var(--hover-radius);
+}
+
+
+/* 右上角表格 */
+#write table:not(.md-grid-board) tr:first-child th:last-child {
+    border-top-right-radius: var(--hover-radius);
+}
+
+/* 左下角表格 */
+#write table:not(.md-grid-board) tr:last-child td:first-child {
+    border-bottom-left-radius: var(--hover-radius);
+}
+
+/* 右下角表格 */
+#write table:not(.md-grid-board) tr:last-child td:last-child {
+    border-bottom-right-radius: var(--hover-radius);
+}
+
+/*一个投机取巧的方法，不过我觉得还挺好看*/
+#write table:not(.md-grid-board) thead tr:first-child th:first-child {
+    border-bottom-left-radius: var(--hover-radius) !important;
+}
+
+#write table:not(.md-grid-board) thead tr:first-child th:last-child {
+    border-bottom-right-radius: var(--hover-radius) !important;
+}
+
+/*
+#write table:not(.md-grid-board):hover {
+    border-radius: var(--hover-radius);
+}
+#write table:not(.md-grid-board) tr:first-child th:first-child:hover {
+    border-top-left-radius: var(--hover-radius);
+}
+
+#write table:not(.md-grid-board) tr:first-child th:last-child:hover {
+    border-top-right-radius: var(--hover-radius);
+}
+
+#write table:not(.md-grid-board) tr:last-child td:first-child:hover {
+    border-bottom-left-radius: var(--hover-radius);
+}
+
+#write table:not(.md-grid-board) tr:last-child td:last-child:hover {
+    border-bottom-right-radius: var(--hover-radius);
+}
+*/
+/* 下方控制条 */
+footer {
+    padding-left: 15px;
+}
+
+/*详细菜单*/
+content .dropdown-menu {
+    border-radius: 5px;
+    background: var(--dropdown-menu-color);
+    box-shadow: 0 8px 10px 1px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%), 0 5px 5px -3px rgb(0 0 0 / 20%);
+}
+
+/* 详细菜单的分割线 */
+.dropdown-menu .divider {
+    border-top: 1px solid #ebebeb;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+/* 表格编辑条 */
+.ty-table-edit {
+    /*overflow: hidden;*/
+    /*width: 30px !important;*/
+    /*height: 30px;*/
+    background: var(--ty-table-edit-bg-color);
+    border-radius: 15px;
+    /*padding-left: 0;*/
+    border: 1px solid var(--table-border-color);
+    /*transition: width .5s ease-in-out, overflow 1s ease-in;*/
+    box-shadow: 0 8px 10px 1px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%), 0 5px 5px -3px rgb(0 0 0 / 20%);
+}
+
+/*.ty-table-edit:hover {*/
+/*    width: 40% !important;*/
+/*    overflow: visible;*/
+/*}*/
+
+/* 表格编辑条按钮 */
+.ty-table-edit button {
+    margin: 0 10px !important;
+    padding: 5px !important;
+    border-radius: 5px !important;
+}
+
+/* 表格编辑条按钮状态 */
+.ty-table-edit button:active,
+.ty-table-edit button:hover,
+.ty-table-edit button.active {
+    background: none !important;
+    border: none !important;
+    box-shadow: 0 8px 10px 1px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%), 0 5px 5px -3px rgb(0 0 0 / 20%);
+}
+
+/*段落*/
+#write > p,
+#write > pre,
+#write > ul {
+    margin-bottom: 1.25rem;
+}
+
+/* mark 高亮 */
+mark {
+    background: var(--mark-bg-color) !important;
+    border-radius: 1em !important;
+    color: var(--mark-text-color);
+    padding: 2px 4px;
+    margin: 1px 2px;
+    font-weight: 500;
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.2s;
+    transition-property: padding, margin;
+}
+
+/* 高亮 hover */
+mark:hover {
+    padding: 4px 8px;
+    margin: 2px 4px;
+}
+
+mark span {
+    white-space: nowrap;
+}
+
+/*行内代码*/
+#write :not(pre) > code {
+    font-family: var(--font-family-monospace);
+    font-weight: 300;
+    color: var(--inline-code-color);
+    padding: 0 4px;
+}
+
+#write :not(pre) > code:hover {
+    color: var(--color-tertiary);
+}
+
+/*行内公式预览*/
+.md-inline-math {
+    margin-left: .3rem;
+    margin-right: .3rem;
+}
+
+.md-inline-math .md-meta {
+    color: #0e82c2;
+}
+
+#math-inline-preview .md-arrow {
+    opacity: .3;
+}
+
+#math-inline-preview #math-inline-preview-content {
+    color: var(--color-on-primary-container);
+}
+
+/*链接*/
+a {
+    font-weight: 700;
+    color: var(--link-color);
+    text-decoration: none;
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.2s;
+    transition-property: transform;
+}
+
+a:hover {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
+/*yaml标签*/
+.md-meta-block {
+    background: var(--meta-block-bg-color) !important;
+    color: var(--meta-block-font-color);
+    margin: 20px 0;
+    padding: 12px 24px;
+    overflow: auto;
+    border-radius: var(--radius);
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.2s;
+    transition-property: border-radius;
+}
+
+.md-meta-block:hover {
+    border-radius: var(--hover-radius);
+}
+
+/*Latex*/
+.md-hover-tip .md-arrow:after {
+    background: var(--color-secondary-container);
+
+}
+
+.md-hover-tip .code-tooltip-content {
+    background: var(--color-secondary-container);
+}
+
+/*角标*/
+sup.md-footnote {
+    background: transparent;
+    color: var(--link-color);
+}
+
+/*目录*/
+.md-toc {
+    font-size: 0.95rem;
+}
+
+/*引用*/
+blockquote {
+    color: var(--blockquote-font-color);
+    background-color: var(--blockquote-bg-color);
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.2s;
+    transition-property: border-radius;
+}
+
+blockquote:hover {
+    border-radius: 24px;
+}
+
+/* 图片 FIXME: 无法显示 */
+#write img::after {
+    content: attr(alt);
+    color: var(--text-color);
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 999;
+}
+
+/* 复选框 */
+#write input[type=checkbox] {
+    cursor: inherit;
+    height: 100%;
+    width: 1rem;
+    margin: 0 -30px;
+    z-index: 1;
+}
+
+/*
+ 侧边栏
+*/
+#outline-content::-webkit-scrollbar,
+#file-library::-webkit-scrollbar {
+    display: none;
+}
+
+#outline-content .outline-item,
+.file-library-file-node {
+    border-radius: 0 16px 16px 0;
+    margin-left: -28px;
+    margin-right: 0 !important;
+    text-overflow: ellipsis;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-left: 28px solid transparent;
+    padding-right: 28px;
+    /*border-right: 28px solid transparent;*/
+    transition: border-radius, width .15s cubic-bezier(0.4, 0, 0.2, 1), margin .15s cubic-bezier(0.4, 0, 0.2, 1), width .15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#outline-content .outline-item:hover,
+.file-library-file-node:hover {
+    opacity: 1 !important;
+    border-radius: 0 16px 16px 0;
+    background-color: var(--sidebar-hover-bg-color);
+}
+
+#outline-content .outline-item-active,
+.file-library-file-node.active {
+    border-radius: 0 16px 16px 0;
+    background-color: var(--sidebar-active-bg-color);
+}
+
+#outline-content .outline-item:not(.outline-item-active),
+.file-library-file-node:not(.active) {
+    opacity: .6;
+}
+
+#file-library-list .file-list-item:hover {
+    opacity: 1 !important;
+    box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+}
+
+#file-library-list .file-list-item:not(.active) {
+    opacity: .6;
+}
+
+#file-library-list .file-list-item.active {
+    background-color: var(--sidebar-active-bg-color);
+}
+
+/* 树文件列表 */
+.file-tree-node.active > .file-node-background {
+    border: none !important;
+    background: none !important;
+}
+
+/* .use-file-tree-style .file-library-file-node:hover {
+    opacity: 1 !important;
+    box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+} */
+
+/* 搜索框 */
+.file-library-search {
+    height: 60px;
+
+}
+
+#file-library-search-panel {
+    padding-bottom: 10px;
+}
+
+#file-library-search-input {
+    opacity: .8;
+    padding: 10px 10px;
+    background-color: var(--sidebar-active-bg-color);
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: background, padding 200ms ease-in, width 200ms ease-out;
+}
+
+#file-library-search-input:focus {
+    background: var(--file-library-search-input-focus-color);
+    padding: 15px 10px;
+    border: 1px solid transparent;
+    box-shadow: 0 1px 1px 0 rgb(65 69 73 / 30%), 0 1px 3px 1px rgb(65 69 73 / 15%);
+}
+
+#close-outline-filter-btn,
+#filesearch-word-option-btn,
+#filesearch-regexp-option-btn,
+#filesearch-case-option-btn {
+    transition: padding 200ms ease-in-out;
+}
+
+#file-library-search-input:focus ~ #close-outline-filter-btn,
+#file-library-search-input:focus ~ #filesearch-word-option-btn,
+#file-library-search-input:focus ~ #filesearch-regexp-option-btn,
+#file-library-search-input:focus ~ #filesearch-case-option-btn {
+    padding-top: 5px;
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 20%);
+}
+
+/* 提示界面 */
+.no-collapse-outline.ty-show-notification.unibody-window content,
+.no-collapse-outline.ty-show-notification.unibody-window content #typora-source,
+.no-collapse-outline.ty-show-notification content,
+.no-collapse-outline.ty-show-notification content #typora-source {
+    top: 28px !important;
+}
+
+.native-window.ty-show-notification.unibody-window content,
+.native-window.ty-show-notification.unibody-window content #typora-source,
+.native-window.ty-show-notification content,
+.native-window.ty-show-notification content #typora-source {
+    top: 0 !important;
+}
+
+.md-notification-container {
+    display: flex;
+    top: 10%;
+    width: 30%;
+    left: 70% !important;
+    padding-top: 0 !important;
+    border-right: 5px solid var(--color-primary);
+    background-color: var(--bg-color);
+    flex-direction: row;
+    border-top-left-radius: var(--hover-radius);
+    border-bottom-left-radius: var(--hover-radius);
+    box-shadow: 0 1px 1px 0 rgb(65 69 73 / 30%), 0 1px 3px 1px rgb(65 69 73 / 15%);
+}
+
+.md-notification-container .md-notification-content {
+    display: block;
+}
+
+.md-notification-container .btn-default {
+    background: none;
+    color: var(--link-color);
+    margin-right: 30px;
+}
+
+/*TODO:导出时的动画*/
+/*.md-notification-container #md-notification div {*/
+/*    display: block !important;*/
+/*}*/
+
+/* 模态框 */
+#common-dialog.modal {
+    overflow-y: hidden;
+    background-color: rgba(55, 55, 55, .4);
+}
+
+.modal .modal-dialog {
+
+    margin: 30% auto;
+}
+
+.modal .modal-content {
+    border-radius: var(--hover-radius);
+    padding: 10px;
+}
+
+.modal .modal-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.modal .btn {
+    color: var(--link-color);
+    background: none;
+}
+
+.modal .btn:hover {
+    font-weight: 600;
+}
+
+.modal .btn:focus {
+    outline: thin dotted;
+}
+
+/*-----------------------------------------
+设置页面
+----------------------------------------- */
+.megamenu-menu-header {
+    border: none;
+    color: var(--text-color);
+}
+
+.megamenu-menu-header #megamenu-back-btn,
+.megamenu-menu-header .megamenu-menu-header-title-back,
+.megamenu-menu-header .megamenu-menu-header-title-menu {
+    color: var(--text-color);
+}
+
+.megamenu-menu-header:hover #megamenu-back-btn {
+    color: var(--link-color);
+}
+
+.megamenu-menu {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    box-shadow: none !important;
+}
+
+.megamenu-menu #m-saved i {
+    display: none !important;
+}
+
+/* 没有保存时 */
+.megamenu-menu #m-save {
+    color: var(--color-error);
+}
+
+/* 已保存 */
+.megamenu-menu #m-saved {
+    color: var(--color-primary);
+}
+
+.megamenu-menu-list a {
+    padding-top: 0;
+    border-radius: 0 16px 16px 0;
+    border-left: 28px solid transparent;
+    border-right: 28px solid transparent;
+    transition: border-radius, width .15s cubic-bezier(0.4, 0, 0.2, 1), margin .15s cubic-bezier(0.4, 0, 0.2, 1), width .15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.megamenu-menu-list {
+    background-color: var(--bg-color);
+}
+
+.megamenu-menu-list a:hover,
+.file-library-file-node:hover {
+    opacity: 1 !important;
+    border-radius: 0 16px 16px 0;
+    background-color: var(--sidebar-hover-bg-color) !important;
+}
+
+.megamenu-menu-list a.active {
+    border-radius: 0 16px 16px 0;
+    background-color: var(--sidebar-active-bg-color) !important;
+}
+
+.megamenu-menu-list a:not(.active) {
+    opacity: .6;
+}
+
+/* 主内容区 */
+header {
+    background-color: var(--bg-color);
+    background-image: none !important;
+}
+
+#megamenu-content {
+    background-color: var(--bg-color);
+    background-image: none !important;
+}
+
+.megamenu-section#megamenu-section-open {
+    margin: 40px 20px;
+    padding: 20px;
+    /* background-color: var(--write-bg-color); */
+    border-radius: var(--hover-radius);
+}
+
+.megamenu-section .long-btn {
+    border-radius: 50px;
+    background: var(--long-btn-color);
+    box-shadow: var(--long-btn-normal);
+    margin: 30px;
+    border: none;
+}
+
+.megamenu-section .long-btn:hover {
+    border-radius: 50px;
+    background: var(--long-btn-hover-bg);
+    box-shadow: var(--long-btn-hover);
+}
+
+.megamenu-section .long-btn:active {
+    border-radius: 50px;
+    background: #e6eef4;
+    box-shadow: inset 5px 5px 10px #c4cacf,
+    inset -5px -5px 10px #ffffff;
+}
+
+/* 搜索框 */
+#recent-file-panel-search-input {
+    opacity: .8;
+    margin: 10px 0;
+    padding: 10px 10px;
+    background-color: var(--sidebar-active-bg-color);
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: background, padding 200ms ease-in, width 200ms ease-out;
+}
+
+#recent-file-panel-search-input:focus {
+    background: var(--file-library-search-input-focus-color);
+    padding: 20px 10px;
+    border: 1px solid transparent;
+    box-shadow: 0 1px 1px 0 rgb(65 69 73 / 30%), 0 1px 3px 1px rgb(65 69 73 / 15%);
+}
+
+#recent-file-panel-action-btn-container {
+    margin-right: 30px;
+    transition: background, padding 200ms ease-in, width 200ms ease-out;
+}
+
+#recent-file-panel-search-input:focus + #recent-file-panel-action-btn-container {
+    padding-top: 5px;
+}
+
+#recent-file-panel-action-btn {
+    color: var(--text-color);
+    outline: none;
+    border-radius: 19px;
+    background: var(--long-btn-color);
+    box-shadow: var(--recent-file-panel-action-btn);
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+}
+
+#recent-file-panel-action-btn:hover {
+    border-radius: 19px;
+    background: var(--recent-file-panel-action-btn-hover-bg);
+    box-shadow: var(--recent-file-panel-action-btn-hover);
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+}
+
+#recent-file-panel-action-btn:active {
+    border-radius: 19px;
+    background: var(--long-btn-color);
+    box-shadow: var(--recent-file-panel-action-btn-active-bg);
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+}
+
+/* 最近文件列表 */
+.recent-file-item:hover {
+    color: var(--color-black);
+    font-weight: 400;
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: var(--recent-file-panel-n-bg-color);
+    color: var(--recent-file-panel-n-color);
+}
+
+/*
+导出网页 TODO
+*/
+.typora-export .outline-item-wrapper {
+    border-radius: 0 16px 16px 0;
+    margin-left: -28px;
+    margin-right: 0 !important;
+    text-overflow: ellipsis;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-left: 28px solid transparent;
+    border-right: 28px solid transparent;
+    transition: border-radius, width .15s cubic-bezier(0.4, 0, 0.2, 1), margin .15s cubic-bezier(0.4, 0, 0.2, 1), width .15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.typora-export .outline-item-wrapper:hover {
+    opacity: 1 !important;
+    border-radius: 0 16px 16px 0;
+    background-color: var(--sidebar-hover-bg-color);
+}
+
+.typora-export .outline-item-active {
+    border-radius: 0 16px 16px 0;
+    background-color: var(--sidebar-active-bg-color);
+}
+
+.typora-export .outline-item-wrapper:not(.outline-item-active) {
+    opacity: .6;
+}
+
+body.typora-export {
+    max-width: none !important;
+}
+
+/*防止超链接点不到*/
+.typora-export .outline-item-wrapper .outline-label {
+    width: 100%;
+}
+
+/*
+Mac 上的一些细节优化
+*/
+/*Macos 的侧边栏边框*/
+.mac-os-11 .sidebar-tabs {
+    border-bottom: none !important;
+}
+
+/*侧边栏搜索框*/
+.mac-os-11 #file-library-search-input {
+    padding: 5px 10px;
+}
+
+.mac-os-11 #file-library-search-input:focus {
+    padding: 10px 10px;
+}
+
+.mac-os-11 #ty-sidebar-search-back-btn {
+    padding-top: 3px;
+}
+
+.mac-os-11 #file-library-search-input:focus ~ #ty-sidebar-search-back-btn {
+    padding-top: 8px;
+}
+
+/*一个偶然发现的置顶功能*/
+.always-on-top #w-unpin {
+    background: var(--titlebar-top-bg-color);
+}
+
+#top-titlebar .toolbar-icon.btn.hover, #top-titlebar .toolbar-icon.btn:hover {
+    background-color: var(--titlebar-bg-color);
+}
+
+/*源码模式按钮背景颜色*/
+.typora-sourceview-on #toggle-sourceview-btn {
+    background: var(--active-file-bg-color);
+    opacity: .2;
+    transition: opacity, padding 200ms ease-in-out;
+}
+
+.typora-sourceview-on #toggle-sourceview-btn:hover {
+    background: var(--active-file-bg-color);
+    opacity: .5;
+}@import "";
+
+:root {
+    /*
+    Color
+    Material 3 标准颜色
+    */
+    --color-white: #fff;
+    --color-black: #000;
+
+    --color-primary: #6750A4;
+    --color-on-primary: #FFFFFF;
+    --color-primary-container: #EADDFF;
+    --color-on-primary-container: #21005D;
+
+    --color-secondary: #625B71;
+    --color-on-secondary: #FFFFFF;
+    --color-secondary-container: #EADDFF;
+    --color-on-secondary-container: #1D192B;
+
+    --color-tertiary: #0e82c2;
+    --color-on-tertiary: #FFFFFF;
+    --color-tertiary-container: #FFD8E4;
+    --color-on-tertiary-container: #31111D;
+
+    --color-error: #B3261E;
+    --color-on-error: #FFFFFF;
+    --color-error-container: #F9DEDC;
+    --color-on-error-container: #410E0B;
+
+    /* 
+    系统变量
+    Typora base.css/base-control.css/windows.css 所带的变量
+    */
+    /* 背景颜色 */
+    --bg-color: #f6f8fc;
+    /* 文字颜色 */
+    --text-color: #333333;
+    /* 选择的文字背景颜色 */
+    --select-text-bg-color: #B5D6FC;
+    /* 选择的文字颜色 */
+    --select-text-font-color: auto;
+    /* 侧边栏颜色 */
+    --side-bar-bg-color: var(--bg-color);
+    /* 菜单边框 */
+    --window-border: 1px solid #e9e9e9;
+    /* 侧边栏活跃文件背景颜色 */
+    --active-file-bg-color: #eee;
+    /* 侧边栏活跃文件文字颜色 */
+    --active-file-text-color: inherit;
+    /* 侧边栏活跃文件边框颜色 */
+    --active-file-border-color: #777;
+    /* 侧边栏宽度 */
+    --sidebar-width: 256px;
+    /*代码块背景*/
+    --code-block-bg-color: #f6f7f8;
+    /*latex背景*/
+    --rawblock-edit-panel-bd: var(--code-block-bg-color);
+
+    /* 
+    主题变量
+    主题所设置的变量
+    */
+    /* 基础字体 */
+    --font-family-base: "思源黑体 CN", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    /*等宽代码字体*/
+    --font-family-monospace: "Fira Code", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    /* 编辑区背景颜色 */
+    --write-bg-color: var(--color-white);
+    /* 圆角 */
+    --radius: 5px;
+    /* 圆角 hover */
+    --hover-radius: 24px;
+    /* 标题颜色 */
+    --title-color: #1f1f1f;
+    /* 链接颜色 */
+    --link-color: #0842a0;
+    /* 标题前的指示标志 */
+    --md-heading-before-color: var(--link-color);
+    /*右键菜单*/
+    --dropdown-menu-color: var(--color-white);
+    /*菜单按钮*/
+    --long-btn-color: #e6eef4;
+    --long-btn-normal: 10px 10px 20px #c4cacf, -10px -10px 20px #ffffff;
+    --long-btn-hover-bg: linear-gradient(145deg, #cfd6dc, #f6ffff);
+    --long-btn-hover: 5px 5px 10px #c4cacf, -5px -5px 10px #ffffff;
+    --recent-file-panel-action-btn: 4px 4px 9px #d6dde3, -4px -4px 9px #f6ffff;
+    --recent-file-panel-action-btn-hover: 4px 4px 9px #d6dde3, -4px -4px 9px #f6ffff;
+    --recent-file-panel-action-btn-hover-bg: linear-gradient(145deg, #cfd6dc, #f6ffff);
+    --recent-file-panel-action-btn-active-bg: inset 4px 4px 9px #d6dde3, inset -4px -4px 9px #f6ffff;
+
+    /*高亮背景颜色*/
+    --mark-bg-color: var(--color-primary-container);
+    /*高亮文字颜色*/
+    --mark-text-color: var(--color-black);
+    /* 引用字体颜色 */
+    --blockquote-font-color: var(--color-on-primary-container);
+    /* 引用背景颜色 */
+    --blockquote-bg-color: var(--color-primary-container);
+
+    /* 行内代码颜色 */
+    --inline-code-color: #008f83;
+    /*表格首行背景颜色*/
+    --table-first-bg-color: #f8f9fa;
+    /*表格编辑条颜色*/
+    --ty-table-edit-bg-color: var(--color-white);
+    /*表格其他行背景颜色*/
+    /* --table-other-bg-color: var(--color-tertiary-container); */
+
+    /* 表格边框颜色  */
+    --table-border-color: #e1e3e1;
+
+    /* YAML 背景颜色 */
+    --meta-block-bg-color: var(--color-tertiary-container);
+    /* YAML 文字颜色 */
+    --meta-block-font-color: var(--color-on-tertiary-container);
+
+    /* active 背景 */
+    --sidebar-active-bg-color: #d3e3fd;
+    /* --sidebar-active-bg-color: #fce8e6; */
+    /* hover 背景 */
+    --sidebar-hover-bg-color: rgba(32, 33, 36, 0.059);
+
+    /*搜索栏 focus 颜色*/
+    --file-library-search-input-focus-color: var(--color-white);
+    /*最近文件单数背景*/
+    --recent-file-panel-n-bg-color: #c0c0c0;
+    --recent-file-panel-n-color: var(--color-black);
+
+    /*操作按钮*/
+    --titlebar-bg-color: #EDEDED;
+    --titlebar-top-bg-color: var(--color-primary-container);
+
+}
+
+/*
+代码块
+*/
+.md-fences {
+    background-color: var(--code-block-bg-color);
+    border-radius: var(--radius);
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: border-radius, padding, box-shadow;
+    transition-timing-function: ease-in-out;
+    /*box-shadow: 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%), 0px 5px 5px -3px rgb(0 0 0 / 20%);*/
+    /*box-shadow: 0 1px 1px 0 rgba(0, 28, 36, .2);*/
+}
+
+.md-fences::selection {
+    color: var(--select-text-bg-color);
+}
+
+/* .md-fences:hover::before {
+    content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDU0IDE0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMSAxKSI+CiAgICAgICAgPGNpcmNsZSBjeD0iNiIgY3k9IjYiIHI9IjYiIGZpbGw9IiNGRjVGNTYiIHN0cm9rZT0iI0UwNDQzRSIgc3Ryb2tlLXdpZHRoPSIuNSI+PC9jaXJjbGU+CiAgICAgICAgPGNpcmNsZSBjeD0iMjYiIGN5PSI2IiByPSI2IiBmaWxsPSIjRkZCRDJFIiBzdHJva2U9IiNERUExMjMiIHN0cm9rZS13aWR0aD0iLjUiPjwvY2lyY2xlPgogICAgICAgIDxjaXJjbGUgY3g9IjQ2IiBjeT0iNiIgcj0iNiIgZmlsbD0iIzI3QzkzRiIgc3Ryb2tlPSIjMUFBQjI5IiBzdHJva2Utd2lkdGg9Ii41Ij48L2NpcmNsZT4KICAgIDwvZz4KPC9zdmc+');
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    z-index: 5;
+} */
+
+/* .md-fences:hover::before {
+    content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTQiIGhlaWdodD0iMTQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8Y2lyY2xlIGlkPSJzdmdfMiIgc3Ryb2tlLXdpZHRoPSIwLjUiIHN0cm9rZT0iI0UwNDQzRSIgZmlsbD0iI0ZGNUY1NiIgcj0iNiIgY3k9IjciIGN4PSI2LjgwNzY5MyIvPgogICAgPGNpcmNsZSBpZD0ic3ZnXzMiIHN0cm9rZS13aWR0aD0iMC41IiBzdHJva2U9IiNERUExMjMiIGZpbGw9IiNGRkJEMkUiIHI9IjYiIGN5PSI3IiBjeD0iMjYuODA3NjkzIi8+CiAgICA8Y2lyY2xlIGlkPSJzdmdfNCIgc3Ryb2tlLXdpZHRoPSIwLjUiIHN0cm9rZT0iIzFBQUIyOSIgZmlsbD0iIzI3QzkzRiIgcj0iNiIgY3k9IjciIGN4PSI0Ni44MDc2OTMiLz4KICAgIDxsaW5lIHRyYW5zZm9ybT0icm90YXRlKDQ1IDYuNzM4NTUxNjE2NjY4NzA2LDcuMDg3MTQwNTYwMTUwMTQ2KSAiIHN0cm9rZT0iIzU1NSIgc3Ryb2tlLWxpbmVjYXA9Im51bGwiCiAgICAgICAgICBzdHJva2UtbGluZWpvaW49Im51bGwiIGlkPSJzdmdfMTMiIHkyPSI3LjA4NzE0MSIgeDI9IjExLjU3MzIyMiIgeTE9IjcuMDg3MTQxIiB4MT0iMS45MDM4ODIiCiAgICAgICAgICBmaWxsLW9wYWNpdHk9Im51bGwiIHN0cm9rZS1vcGFjaXR5PSJudWxsIiBmaWxsPSJub25lIi8+CiAgICA8bGluZSB0cmFuc2Zvcm09InJvdGF0ZSgtNDUgNi43Mzg1NTE2MTY2Njg3MDIsNy4wODcxNDA1NjAxNTAxNDYpICIgc3Ryb2tlPSIjNTU1IiBzdHJva2UtbGluZWNhcD0ibnVsbCIKICAgICAgICAgIHN0cm9rZS1saW5lam9pbj0ibnVsbCIgaWQ9InN2Z18xNSIgeTI9IjcuMDg3MTQxIiB4Mj0iMTEuNTczMjIyIiB5MT0iNy4wODcxNDEiIHgxPSIxLjkwMzg4MiIKICAgICAgICAgIGZpbGwtb3BhY2l0eT0ibnVsbCIgc3Ryb2tlLW9wYWNpdHk9Im51bGwiIGZpbGw9Im5vbmUiLz4KICAgIDxsaW5lIHN0cm9rZT0iIzU1NSIgc3Ryb2tlLWxpbmVjYXA9Im51bGwiIHN0cm9rZS1saW5lam9pbj0ibnVsbCIgaWQ9InN2Z18xNiIgeTI9IjcuMDg3MTQxIiB4Mj0iMzEuNzY1NTAzIgogICAgICAgICAgeTE9IjcuMDg3MTQxIiB4MT0iMjIuMDk2MTYyIiBmaWxsLW9wYWNpdHk9Im51bGwiIHN0cm9rZS1vcGFjaXR5PSJudWxsIiBmaWxsPSJub25lIi8+CiAgICA8cGF0aCB0cmFuc2Zvcm09InJvdGF0ZSg5MCA0NS42Nzc3Njg3MDcyNzUzOSw2LjMwMTg5ODQ3OTQ2MTY3NCkgIiBpZD0ic3ZnXzE4IgogICAgICAgICAgZD0ibTQ1LjI5MzE1MSw2LjY4NjUxNGwwLC0wLjc2OTIzMWwwLjc2OTIzMSwwLjc2OTIzMWwtMC43NjkyMzEsMHoiIGZpbGwtb3BhY2l0eT0ibnVsbCIgc3Ryb2tlLW9wYWNpdHk9Im51bGwiCiAgICAgICAgICBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZT0iIzU1NSIgZmlsbD0ibm9uZSIvPgogICAgPHBhdGggdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDQ3Ljk4NTQ1ODM3NDAyMzQ0NSw4LjgwMTg5ODAwMjYyNDUxKSAiIGlkPSJzdmdfMTkiCiAgICAgICAgICBkPSJtNDcuNjAwODQyLDkuMTg2NTE0bDAsLTAuNzY5MjNsMC43NjkyMywwLjc2OTIzbC0wLjc2OTIzLDB6IiBmaWxsLW9wYWNpdHk9Im51bGwiIHN0cm9rZS1vcGFjaXR5PSJudWxsIgogICAgICAgICAgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2U9IiM1NTUiIGZpbGw9Im5vbmUiLz4KPC9zdmc+");
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    z-index: 5;
+} */
+.md-fences:hover,
+.auto-suggest-for-fences:hover {
+    border-radius: var(--hover-radius);
+    /* padding-top: 15px; */
+    /* padding-bottom: 15px; */
+    /* box-shadow: 0 20px 40px rgb(0 0 0 / 55%); */
+}
+
+.CodeMirror.cm-s-inner {
+    border-radius: 15px;
+    padding: 15px 10px 10px 10px;
+}
+
+.md-fences:hover::after {
+    content: attr(lang);
+    transition-duration: 200ms;
+    color: var(--color-tertiary);
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 20%);
+    font-size: .8rem;
+    font-style: italic;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 999;
+}
+
+.CodeMirror div.CodeMirror-cursor {
+    border-left: 1px solid var(--text-color) !important;
+}
+
+.cm-s-inner .CodeMirror-gutters {
+    color: #404b53;
+    background-color: transparent;
+    border-right: 0
+}
+
+.cm-s-inner .CodeMirror-linenumber {
+    color: #6d8a88
+}
+
+.cm-s-inner div.CodeMirror-selected {
+    background: #e0e0e0
+}
+
+.cm-s-inner .CodeMirror-line::selection,
+.cm-s-inner .CodeMirror-line > span::selection,
+.cm-s-inner .CodeMirror-line > span > span::selection {
+    background: #e0e0e0
+}
+
+.cm-s-inner .CodeMirror-line::-moz-selection,
+.cm-s-inner .CodeMirror-line > span::-moz-selection,
+.cm-s-inner .CodeMirror-line > span > span::-moz-selection {
+    background: #e0e0e0
+}
+
+.cm-s-inner .CodeMirror-guttermarker {
+    color: #ac4142
+}
+
+.cm-s-inner .CodeMirror-guttermarker-subtle {
+    color: #b0b0b0
+}
+
+.cm-s-inner .CodeMirror-linenumber {
+    color: #b0b0b0
+}
+
+.cm-s-inner .CodeMirror-linenumbers {
+    background-color: var(--code-block-bg-color)
+}
+
+.cm-s-inner .CodeMirror-cursor {
+    border-left: 1px solid #505050
+}
+
+.cm-s-inner span.cm-comment {
+    color: #8f5536
+}
+
+.cm-s-inner span.cm-atom {
+    color: #aa759f
+}
+
+.cm-s-inner span.cm-number {
+    color: #aa759f
+}
+
+.cm-s-inner span.cm-attribute,
+.cm-s-inner span.cm-property {
+    color: #90a959
+}
+
+.cm-s-inner span.cm-keyword {
+    color: #ac4142
+}
+
+.cm-s-inner span.cm-string {
+    color: #f4bf75
+}
+
+.cm-s-inner span.cm-variable {
+    color: #90a959
+}
+
+.cm-s-inner span.cm-variable-2 {
+    color: #6a9fb5
+}
+
+.cm-s-inner span.cm-def {
+    color: #d28445
+}
+
+.cm-s-inner span.cm-bracket {
+    color: #202020
+}
+
+.cm-s-inner span.cm-tag {
+    color: #ac4142
+}
+
+.cm-s-inner span.cm-link {
+    color: #aa759f
+}
+
+.cm-s-inner span.cm-error {
+    /*background: #ac4142;*/
+    color: var(--color-error)
+}
+
+.cm-s-inner .CodeMirror-matchingbracket {
+    color: #f5f5f5 !important;
+    background-color: #6a9fb5 !important
+}
+
+
+
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><h1><a name="artificial-intelligence-homework-2" class="md-header-anchor"></a><span>Artificial Intelligence-Homework 2</span></h1><p><strong><span>Name：</span></strong><span>张弛（ZHANG Chi）</span></p><p><strong><span>SID：</span></strong><span>12110821</span></p><p><strong><span>Link of pull request: </span></strong><span> </span><a href='https://github.com/SustechSTA303/STA303-Assignment02/pull/32'><span>Zhang Chi 12110821 </span></a></p><p>&nbsp;</p><h2><a name="introduction" class="md-header-anchor"></a><span>Introduction</span></h2><p><span>In this assignment, I test performance of CLIP in </span><strong><span>Text-to-Image Retrieval</span></strong><span> and compared it to a baseline model. </span></p><ul><li><p><span>Scenario: Retrieve images based on textual descriptions.</span></p></li><li><p><span>Implementation Steps:</span></p><ul><li><span>Load the  pre-trained model.</span></li><li><span>Encode textual descriptions and images.</span></li><li><span>Calculate cosine similarity to find the most similar images for a given text.</span></li></ul></li><li><p><span>Dataset: The dataset I choose is </span><strong><span>Pokemon</span></strong><span> in </span><a href='https://huggingface.co/datasets/lambdalabs/pokemon-blip-captions'><span>Hugging Face</span></a><span>. </span></p><p><img src="fig/data.png" alt="data" style="zoom:80%;" /></p><ul><li><p><span>There are </span><strong><span>833</span></strong><span> rows in the dataset. For each row the dataset contains </span><code>image</code><span> and </span><code>text</code><span> keys. </span><code>image</code><span> is a varying size PIL jpeg, and </span><code>text</code><span> is the accompanying text caption. Only a train split is provided.</span></p><blockquote><p><span>As I don’t need to train the model by myself as well as the task is to enumerate every row of text to find top-K matched images from whole image list, which will occupy a multitude of GPU resources, I choose a small sample data, concentrating on the performance of origin CLIP model. </span></p></blockquote></li><li><p><span>Data is preprocessed in the file</span><code>data_preprocess.ipynb</code><span>.</span></p></li></ul></li><li><p><span>Baseline model: </span></p><ul><li><p><span>A mean pooling operation on the last hidden states of the </span><strong><span>BERT model</span></strong><span> is used for text encoding. For image encoding, I use a </span><strong><span>pre-trained ResNet model</span></strong><span> and extract the features from the last fully connected layer. The similarity between text and image embeddings is then computed using cosine similarity.</span></p><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang="python" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="python"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 15px; left: 47px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 33px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>18</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -33px; width: 33px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 25px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">from</span> <span class="cm-variable">transformers</span> <span class="cm-keyword">import</span> <span class="cm-variable">BertModel</span>, <span class="cm-variable">BertTokenizer</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 25px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">text_encoder_bl</span> = <span class="cm-variable">BertModel</span>.<span class="cm-property">from_pretrained</span>(<span class="cm-string">'baselinemodel/bert-base-uncased'</span>)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 25px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">tokenizer_bl</span> = <span class="cm-variable">BertTokenizer</span>.<span class="cm-property">from_pretrained</span>(<span class="cm-string">'baselinemodel/bert-base-uncased'</span>)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 25px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 25px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">image_encoder_bl</span> = <span class="cm-variable">models</span>.<span class="cm-property">resnet50</span>(<span class="cm-variable">pretrained</span>=<span class="cm-keyword">True</span>)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 25px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 25px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">def</span> <span class="cm-def">encode_text_bl</span>(<span class="cm-variable">text</span>):</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 25px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  ``` ```</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 25px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-keyword">return</span> <span class="cm-variable">outputs</span> </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 25px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 25px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">def</span> <span class="cm-def">encode_image_bl</span>(<span class="cm-variable">image</span>):</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 25px;">12</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  ``` ```</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 25px;">13</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-variable">features</span>.<span class="cm-property">squeeze</span>()</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 25px;">14</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 25px;">15</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Function to compute similarity between text and image embeddings</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 25px;">16</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">def</span> <span class="cm-def">compute_similarity_bl</span>(<span class="cm-variable">text_features</span>, <span class="cm-variable">image_features</span>):</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 25px;">17</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  ``` ```</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 25px;">18</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-variable">torch</span>.<span class="cm-property">nn</span>.<span class="cm-property">functional</span>.<span class="cm-property">cosine_similarity</span>(<span class="cm-variable">normalized_text_features</span>, <span class="cm-variable">normalized_image_features</span>, <span class="cm-variable">dim</span>=<span class="cm-operator">-</span><span class="cm-number">1</span>)</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 360px;"></div><div class="CodeMirror-gutters" style="height: 360px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 33px;"></div></div></div></div></pre></li><li><p><span>Considering that the text features have 768 dimensions, and image features have 1000 dimensions, I </span><strong><span>project</span></strong><span> the text features to the same dimensionality as the image features using a linear layer. Preserves the original information in text features. Matches the dimensionality of image features without information loss.</span></p><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang="python"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="python"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 15px; left: 47px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 33px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>13</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -33px; width: 33px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 25px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">import</span> <span class="cm-variable">torch</span>.<span class="cm-property">nn</span>.<span class="cm-property">functional</span> <span class="cm-keyword">as</span> <span class="cm-variable">F</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 25px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 25px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Function to project text features to match image features dimensionality</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 25px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">class</span> <span class="cm-def">TextProjection</span>(<span class="cm-variable">nn</span>.<span class="cm-property">Module</span>):</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 25px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">def</span> <span class="cm-def">__init__</span>(<span class="cm-variable-2">self</span>, <span class="cm-variable">input_dim</span>, <span class="cm-variable">output_dim</span>):</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 25px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-builtin">super</span>(<span class="cm-variable">TextProjection</span>, <span class="cm-variable-2">self</span>).<span class="cm-property">__init__</span>()</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 25px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable-2">self</span>.<span class="cm-property">linear</span> = <span class="cm-variable">nn</span>.<span class="cm-property">Linear</span>(<span class="cm-variable">input_dim</span>, <span class="cm-variable">output_dim</span>)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 25px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 25px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">def</span> <span class="cm-def">forward</span>(<span class="cm-variable-2">self</span>, <span class="cm-variable">x</span>):</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 25px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-variable-2">self</span>.<span class="cm-property">linear</span>(<span class="cm-variable">x</span>)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 25px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 25px;">12</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># Instantiate the projection layer</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 25px;">13</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">projection_layer</span> = <span class="cm-variable">TextProjection</span>(<span class="cm-variable">input_dim</span>=<span class="cm-number">768</span>, <span class="cm-variable">output_dim</span>=<span class="cm-number">1000</span>).<span class="cm-property">to</span>(<span class="cm-variable">device</span>)</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 260px;"></div><div class="CodeMirror-gutters" style="height: 260px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 33px;"></div></div></div></div></pre></li></ul></li></ul><p>&nbsp;</p><h2><a name="experiment" class="md-header-anchor"></a><span>Experiment</span></h2><h3><a name="similarity-of-origin-text-to-image" class="md-header-anchor"></a><span>Similarity of origin text-to-image</span></h3><p><span>To quickly understand the performance of the model on the data, I compute the </span><strong><span>similarity score</span></strong><span> of text and image of each row.  Then histogram as well as density curve are as follows.</span></p><p><img src="fig/histplot.svg" alt="histplot" style="zoom: 80%;" /></p><ul><li><span>According to the Visual graphic, CLIP models have higher scores than the baseline model, meaning that they  can be better able to identify features of images as well as text and match them. </span></li><li><span>Besides,  I use </span><code>3 different VISUAL_BACKBONE</code><span>for clip and they have different performances. Overall, the CLIP in ViT-B/16 and ViT-B/32 are greater than the one using RN50.</span></li><li><span>However,  all similarity scores obtained by models are less than 0.5, meaning that all of them are in terrible match. So we can implement the model to do qualitative tasks instead of quantitative tasks, that is, </span><strong><span>making comparison among results from single row.</span></strong><span> </span></li></ul><h3><a name="text-to-image-retrieval" class="md-header-anchor"></a><span>Text-to-Image Retrieval</span></h3><p><span>To  quickly check the capability of </span><strong><span>finding image form a specific query</span></strong><span>, I did some tests for CLIP(RN50) and Baseline Model. Here is the result(Top 5 images) by querying ‘flying in the sky’.(more on appendix) </span></p><ul><li><p><strong><span>CLIP(RN50)</span></strong><span>:</span></p><p><img src="fig/query_clip.svg" referrerpolicy="no-referrer" alt="query_clip"></p></li><li><p><strong><span>Baseline Model</span></strong><span>:</span></p><p><img src="fig/query_bl.svg" referrerpolicy="no-referrer" alt="query_bl"></p></li></ul><p><span>It is apparent that CLIP can </span><strong><span>catch the key word </span><code>flying</code></strong><span>and be more competitive in retrieval, while Baseline Model could not extract the text feature exactly. </span></p><p><span>Then I design an experiment to quantify the performance of text-to-image-retrieval:</span></p><ol start='' ><li><p><span>For each text and one row, compute its similarity between all image, then we get a  similarity list with length 833.</span></p></li><li><p><span>Get the top-K (5 by default ) similarities from the whole list.</span></p></li><li><p><span>If the top-K images (from top-K similarities) contain the origin image corresponding to the text in raw data, add 1 point to the model.</span></p></li><li><p><span>After enumerating  all text, compute scores and accuracy of each model and compare them.</span></p><blockquote><p><span>To simplify the whole experiment, I only add one point to the successful retrieval. In fact, we can explore more by modifying the top-K or assigning score differently(5 points to the circumstance that origin image in the first place, 4 points to the circumstance that  origin image in the second place, etc.). </span></p></blockquote></li></ol><p><img src="fig/scores.svg" referrerpolicy="no-referrer" alt="scores"></p><p><span>The figure above has demonstrated scores(orange) and accuracy(green) attained by each model. Based on the pictured information, Baseline model has worst performance among four models, with 6 successfully retrieval in 833 times. And  CLIP(ViT-B/16) has get greatest score, then CLIP(ViT-B/32) and CLIP(RN50), with score in 400, 376, 339 respectively.</span></p><p><span>Actually, the retrieval here is just find the most appropriate images in finite data,  which is  inclined to be a multi-classification task rather than a text-to-image retrieval task, even though there are 833 labels. And Taking a consideration that using it in the real-world online retrieval, this kind of image search method is </span><strong><span>less effective</span></strong><span>. </span></p><p>&nbsp;</p><h2><a name="conclusion" class="md-header-anchor"></a><span>Conclusion</span></h2><p><span>The experiment has provided valuable insights into the performance of CLIP in the context of Text-to-Image Retrieval using the Pokemon dataset. The findings emphasize the importance of validating CLIP&#39;s capabilities on new datasets to understand its generalization and limitations.</span></p><h3><a name="key-findings" class="md-header-anchor"></a><span>Key Findings:</span></h3><ol start='' ><li><p><strong><span>CLIP Performance:</span></strong></p><ul><li><span>CLIP, especially with Vision Transformer backbones (ViT-B/16 and ViT-B/32), showcased superior performance in text-to-image retrieval compared to the baseline model.</span></li><li><span>The qualitative tests and quantitative experiment indicated that CLIP models can effectively capture contextual information from textual descriptions to retrieve relevant images.</span></li></ul></li><li><p><strong><span>Challenges and Limitations:</span></strong></p><ul><li><span>The experiment revealed challenges in achieving high similarity scores, suggesting potential areas for improvement in the accuracy of text-to-image matching.</span></li><li><span>The small size of the dataset and the need for fine-tuning highlight the importance of considering dataset characteristics for optimal model performance.</span></li></ul></li></ol><h3><a name="recommendations-for-further-investigations" class="md-header-anchor"></a><span>Recommendations for Further Investigations:</span></h3><ol start='' ><li><strong><span>Diverse Datasets: </span></strong><span>Validate CLIP&#39;s performance on diverse dataset with varying characteristics to assess its generalization across different domains.</span></li><li><strong><span>Fine-Tuning Strategies:</span></strong><span> Explore fine-tuning strategies to enhance CLIP&#39;s performance on specific tasks or domains, considering the unique features and challenges of the target dataset.</span></li><li><strong><span>Hyperparameter Tuning:</span></strong><span> Conduct thorough hyperparameter tuning experiments to identify optimal settings for the CLIP models, addressing challenges in obtaining high similarity scores.</span></li><li><strong><span>User Feedback and Qualitative Analysis:</span></strong><span> Incorporate user feedback and conduct qualitative analysis of retrieval results to gain insights into subjective aspects that quantitative metrics may not capture.</span></li><li><strong><span>Real-World Deployment Considerations:</span></strong><span> Assess the run time efficiency and computational requirements of CLIP models for potential real-world deployment, considering practical constraints and resource availability.</span></li></ol><p><span>In conclusion, while CLIP has shown promise in the Text-to-Image Retrieval task, further investigations and refinements are crucial for optimising its performance on new datasets. The experiment serves as a starting point, and ongoing research will contribute to unlocking the full potential of CLIP in various applications.</span></p><p>&nbsp;</p><h2><a name="appendix" class="md-header-anchor"></a><span>Appendix</span></h2><p><span>In this part, I show more results of different queries from clip and baseline model.</span></p><h3><a name="mouth-open" class="md-header-anchor"></a><span>Mouth open</span></h3><ul><li><strong><span>CLIP(RN50)</span></strong></li></ul><p><img src="fig/query_clip2.svg" referrerpolicy="no-referrer">
+<span>		</span><span>add some noise:</span></p><p><img src="fig/query_clip_noise.svg" referrerpolicy="no-referrer" alt="query_clip_noise"></p><p>&nbsp;</p><ul><li><strong><span>Baseline model</span></strong></li></ul><p><img src="fig/query_bl2.svg" referrerpolicy="no-referrer" alt="query_bl2"></p><h3><a name="a-yellow-cat" class="md-header-anchor"></a><span>A yellow cat</span></h3><ul><li><strong><span>CLIP(RN50)</span></strong></li></ul><p><img src="fig/query_clip3.svg" referrerpolicy="no-referrer"></p><ul><li><strong><span>Baseline model</span></strong></li></ul><p><img src="fig/query_bl3.svg" referrerpolicy="no-referrer" alt="query_bl2"></p><h3><a name="a-red-ball" class="md-header-anchor"></a><span>A red ball</span></h3><ul><li><strong><span>CLIP(RN50)</span></strong></li></ul><p><img src="fig/query_clip4.svg" referrerpolicy="no-referrer"></p><ul><li><strong><span>Baseline model</span></strong></li></ul><p><img src="fig/query_bl4.svg" referrerpolicy="no-referrer" alt="query_bl2"></p><p>&nbsp;</p></div>
+</body>
+</html>
